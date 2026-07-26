@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafío Stickers</title>
+
+  <link rel="stylesheet" href=".//assets/style.css">
+</head>
+<body>
+
+  <h2>Selecciona tus stickers (máximo 10)</h2>
+
+  <div class="stickers-container">
+    <!-- Sticker 1 -->
+    <div class="sticker-card">
+      <img src=".//assets/img/baneblade.jpg" alt="baneblade">
+      <input type="number" id="input-sticker1" value="0" min="0">
+    </div>
+
+    <!-- Sticker 2 -->
+    <div class="sticker-card">
+      <img src=".//assets/img/hydra.jpg" alt="hydra">
+      <input type="number" id="input-sticker2" value="0" min="0">
+    </div>
+
+    <!-- Sticker 3 -->
+    <div class="sticker-card">
+      <img src=".//assets/img/lemanruss.jpg" alt="Sticker 3">
+      <input type="number" id="input-sticker3" value="0" min="0">
+    </div>
+  </div>
+
+  <!-- Botón para calcular -->
+  <button id="btn-verificar">Calcular total</button>
+
+  <!-- Párrafo donde se muestra el resultado -->
+  <p id="resultado"></p>
+
+  <script>
+    const input1 = document.querySelector("#input-sticker1");
+    const input2 = document.querySelector("#input-sticker2");
+    const input3 = document.querySelector("#input-sticker3");
+    const boton = document.querySelector("#btn-verificar");
+    const resultado = document.querySelector("#resultado");
+
+    boton.addEventListener("click", () => {
+      const total = Number(input1.value) + Number(input2.value) + Number(input3.value);
+
+      if (total <= 10) {
+        resultado.textContent = `Llevas ${total} stickers`;
+      } else {
+        resultado.textContent = "Llevas demasiados stickers";
+      }
+    });
+  </script>
+</body>
+</html>

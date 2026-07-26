@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafío Borde onclick</title>
+<link rel="stylesheet" href=".//assets/style.css">
+    
+<style>
+   
+    .imagen-desaf {
+      cursor: pointer;
+      width: 300px;
+      transition: border 0.1s ease;
+    }
+
+    
+    .borde-rojo {
+      border: 2px solid red;
+    }
+  </style>
+</head>
+<body>
+
+  <img id="emperor" src=".//assets/img/tze-kun-chin-the-emperor.jpg" alt="emperor">
+
+  <script>
+
+    const imagen = document.querySelector("#emperor");
+
+
+    imagen.addEventListener("click", () => {
+      
+      if (imagen.classList.contains("borde-rojo")) {
+  
+        imagen.classList.remove("borde-rojo");
+      } else {
+
+        imagen.classList.add("borde-rojo");
+      }
+
+    });
+  </script>
+</body>
+</html>

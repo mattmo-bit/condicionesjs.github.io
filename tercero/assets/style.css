@@ -1,0 +1,39 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  text-align: center;
+  padding: 40px;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button {
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #1d0052;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #9900ff;
+}
+
+#resultado {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+}
